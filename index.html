@@ -1,592 +1,563 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="uz">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #164fc7; -webkit-text-stroke: #164fc7}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #855504; -webkit-text-stroke: #855504}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #115d3e; -webkit-text-stroke: #115d3e}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #2e3133; -webkit-text-stroke: #2e3133}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #888f95; -webkit-text-stroke: #888f95}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #2e3133; -webkit-text-stroke: #2e3133; min-height: 16.0px}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #2e3133; -webkit-text-stroke: #2e3133; background-color: #ffffff}
-    span.s1 {font-kerning: none; background-color: #ffffff}
-    span.s2 {font-kerning: none; color: #2e3133; background-color: #ffffff; -webkit-text-stroke: 0px #2e3133}
-    span.s3 {font-kerning: none; color: #4d5055; background-color: #ffffff; -webkit-text-stroke: 0px #4d5055}
-    span.s4 {font-kerning: none; color: #855504; background-color: #ffffff; -webkit-text-stroke: 0px #855504}
-    span.s5 {font-kerning: none; color: #115d3e; background-color: #ffffff; -webkit-text-stroke: 0px #115d3e}
-    span.s6 {font-kerning: none; color: #164fc7; background-color: #ffffff; -webkit-text-stroke: 0px #164fc7}
-    span.s7 {font-kerning: none; color: #6624a5; background-color: #ffffff; -webkit-text-stroke: 0px #6624a5}
-    span.s8 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSK 3 Lesson 1 App</title>
+    <!-- Tailwind CSS (Stable CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React & ReactDOM (Stable CDN with crossorigin) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+    <!-- Babel for in-browser JSX parsing (Stable CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.3/babel.min.js" crossorigin="anonymous"></script>
+    <style>
+        .perspective-1000 { perspective: 1000px; }
+        .transform-style-3d { transform-style: preserve-3d; }
+        .backface-hidden { backface-visibility: hidden; }
+        .rotate-y-180 { transform: rotateY(180deg); }
+        .animate-fade-in-up { animation: fadeInUp 0.4s ease-out forwards; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;</span><span class="s1">html</span><span class="s2"> </span><span class="s4">lang</span><span class="s3">=</span><span class="s5">"uz"</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s2"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s2"> </span><span class="s4">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s2"> </span><span class="s4">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">HSK 3 Lesson 1 App</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Tailwind CSS (Stable CDN) --&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s2"> </span><span class="s4">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- React &amp; ReactDOM (Stable CDN with crossorigin) --&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s2"> </span><span class="s4">src</span><span class="s3">=</span><span class="s1">"https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"</span><span class="s2"> </span><span class="s4">crossorigin</span><span class="s3">=</span><span class="s1">"anonymous"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s2"> </span><span class="s4">src</span><span class="s3">=</span><span class="s1">"https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"</span><span class="s2"> </span><span class="s4">crossorigin</span><span class="s3">=</span><span class="s1">"anonymous"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Babel for in-browser JSX parsing (Stable CDN) --&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s2"> </span><span class="s4">src</span><span class="s3">=</span><span class="s1">"https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.3/babel.min.js"</span><span class="s2"> </span><span class="s4">crossorigin</span><span class="s3">=</span><span class="s1">"anonymous"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">.perspective-1000</span><span class="s2"> </span><span class="s3">{</span><span class="s2"> </span><span class="s4">perspective:</span><span class="s2"> </span><span class="s5">1000px</span><span class="s3">;</span><span class="s2"> </span><span class="s3">}</span></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">.transform-style-3d</span><span class="s2"> </span><span class="s3">{</span><span class="s2"> </span><span class="s4">transform-style:</span><span class="s2"> </span><span class="s5">preserve-3d</span><span class="s3">;</span><span class="s2"> </span><span class="s3">}</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s6">.backface-hidden</span><span class="s2"> </span><span class="s3">{</span><span class="s2"> </span><span class="s1">backface-visibility:</span><span class="s2"> </span><span class="s5">hidden</span><span class="s3">;</span><span class="s2"> </span><span class="s3">}</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s6">.rotate-y-180</span><span class="s2"> </span><span class="s3">{</span><span class="s2"> </span><span class="s4">transform:</span><span class="s2"> </span><span class="s1">rotateY(180deg)</span><span class="s3">;</span><span class="s2"> </span><span class="s3">}</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s6">.animate-fade-in-up</span><span class="s2"> </span><span class="s3">{</span><span class="s2"> </span><span class="s4">animation:</span><span class="s2"> </span><span class="s1">fadeInUp</span><span class="s2"> </span><span class="s1">0.4s</span><span class="s2"> </span><span class="s1">ease-out</span><span class="s2"> </span><span class="s1">forwards</span><span class="s3">;</span><span class="s2"> </span><span class="s3">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">@keyframes</span><span class="s1"> </span><span class="s5">fadeInUp</span><span class="s1"> </span><span class="s3">{</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s1">from</span><span class="s2"> </span><span class="s3">{</span><span class="s2"> </span><span class="s4">opacity:</span><span class="s2"> </span><span class="s1">0</span><span class="s3">;</span><span class="s2"> </span><span class="s4">transform:</span><span class="s2"> </span><span class="s1">translateY(10px)</span><span class="s3">;</span><span class="s2"> </span><span class="s3">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">to</span><span class="s1"> </span><span class="s3">{</span><span class="s1"> </span><span class="s4">opacity:</span><span class="s1"> </span><span class="s5">1</span><span class="s3">;</span><span class="s1"> </span><span class="s4">transform:</span><span class="s1"> </span><span class="s5">translateY(0)</span><span class="s3">;</span><span class="s1"> </span><span class="s3">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">}</span></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;</span><span class="s6">body</span><span class="s2"> </span><span class="s4">class</span><span class="s3">=</span><span class="s1">"bg-slate-950 text-slate-200 font-sans selection:bg-amber-500/30 overflow-x-hidden min-h-screen"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s2"> </span><span class="s4">id</span><span class="s3">=</span><span class="s1">"root"</span><span class="s3">&gt;&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s2"> </span><span class="s4">type</span><span class="s3">=</span><span class="s1">"text/babel"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const { useState, useEffect } = React;</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>// --- ICONS (Replaced lucide-react with inline SVGs for standalone HTML) ---</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const Volume2 = ({ size = 24, className = "" }) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}&gt;&lt;polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"&gt;&lt;/polygon&gt;&lt;path d="M15.54 8.46a5 5 0 0 1 0 7.07"&gt;&lt;/path&gt;&lt;path d="M19.07 4.93a10 10 0 0 1 0 14.14"&gt;&lt;/path&gt;&lt;/svg&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const ChevronRight = ({ size = 24, className = "" }) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}&gt;&lt;polyline points="9 18 15 12 9 6"&gt;&lt;/polyline&gt;&lt;/svg&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const ChevronLeft = ({ size = 24, className = "" }) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}&gt;&lt;polyline points="15 18 9 12 15 6"&gt;&lt;/polyline&gt;&lt;/svg&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const CheckCircle = ({ size = 24, className = "" }) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}&gt;&lt;path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"&gt;&lt;/path&gt;&lt;polyline points="22 4 12 14.01 9 11.01"&gt;&lt;/polyline&gt;&lt;/svg&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const XCircle = ({ size = 24, className = "" }) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}&gt;&lt;circle cx="12" cy="12" r="10"&gt;&lt;/circle&gt;&lt;line x1="15" y1="9" x2="9" y2="15"&gt;&lt;/line&gt;&lt;line x1="9" y1="9" x2="15" y2="15"&gt;&lt;/line&gt;&lt;/svg&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const RotateCcw = ({ size = 24, className = "" }) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}&gt;&lt;polyline points="1 4 1 10 7 10"&gt;&lt;/polyline&gt;&lt;path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"&gt;&lt;/path&gt;&lt;/svg&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const BookOpen = ({ size = 24, className = "" }) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}&gt;&lt;path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"&gt;&lt;/path&gt;&lt;path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"&gt;&lt;/path&gt;&lt;/svg&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const MessageCircle = ({ size = 24, className = "" }) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}&gt;&lt;path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"&gt;&lt;/path&gt;&lt;/svg&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const BookText = ({ size = 24, className = "" }) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}&gt;&lt;path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"&gt;&lt;/path&gt;&lt;path d="M8 7h6"&gt;&lt;/path&gt;&lt;path d="M8 11h8"&gt;&lt;/path&gt;&lt;/svg&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const FileQuestion = ({ size = 24, className = "" }) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}&gt;&lt;path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"&gt;&lt;/path&gt;&lt;polyline points="14 2 14 8 20 8"&gt;&lt;/polyline&gt;&lt;circle cx="12" cy="17" r="1"&gt;&lt;/circle&gt;&lt;path d="M12 14v-2c1.5 0 2.5-1 2.5-2.5S13.5 7 12 7 9.5 8 9.5 9.5"&gt;&lt;/path&gt;&lt;/svg&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const HelpCircle = ({ size = 24, className = "" }) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}&gt;&lt;circle cx="12" cy="12" r="10"&gt;&lt;/circle&gt;&lt;path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"&gt;&lt;/path&gt;&lt;line x1="12" y1="17" x2="12.01" y2="17"&gt;&lt;/line&gt;&lt;/svg&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const PenTool = ({ size = 24, className = "" }) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}&gt;&lt;path d="M12 19l7-7 3 3-7 7-3-3z"&gt;&lt;/path&gt;&lt;path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"&gt;&lt;/path&gt;&lt;path d="M2 2l7.586 7.586"&gt;&lt;/path&gt;&lt;circle cx="11" cy="11" r="2"&gt;&lt;/circle&gt;&lt;/svg&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>// --- DATA ---</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const VOCABULARY = [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 1, zh: "以为", py: "yǐwéi", uz: "o'ylamoq, xisoblamoq", ru: "думать, полагать", en: "to think, consider" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 2, zh: "像", py: "xiàng", uz: "o'xshamoq", ru: "быть похожим", en: "to be like" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 3, zh: "长", py: "zhǎng", uz: "o'smoq, rivojlanmoq", ru: "расти, развиваться", en: "to grow, develop" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 4, zh: "身高", py: "shēnggāo", uz: "bo'y", ru: "рост", en: "height" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 5, zh: "米", py: "mǐ", uz: "metr", ru: "метр", en: "meter" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 6, zh: "瘦", py: "shòu", uz: "ozg'in", ru: "худой", en: "thin" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 7, zh: "接", py: "jiē", uz: "kutib olmoq", ru: "встречать", en: "to meet, pick up" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 8, zh: "行李", py: "xíngli", uz: "bagaj, yuk", ru: "багаж", en: "luggage" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 9, zh: "丢", py: "diū", uz: "yo'qotmoq", ru: "терять", en: "to lose" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 10, zh: "箱子", py: "xiāngzi", uz: "jomadon, quti", ru: "чемодан, ящик", en: "case, trunk" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 11, zh: "号码", py: "hàomǎ", uz: "raqam", ru: "номер", en: "number" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 12, zh: "好像", py: "hǎoxiàng", uz: "o'xshaydi, go'yo", ru: "кажется, похоже", en: "seemingly" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 13, zh: "重要", py: "zhòngyào", uz: "muhim", ru: "важный", en: "important" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 14, zh: "着急", py: "zháojí", uz: "xavotirlanmoq", ru: "волноваться", en: "worried, anxious" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 15, zh: "护照", py: "hùzhào", uz: "pasport", ru: "паспорт", en: "passport" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 16, zh: "服务台", py: "fúwùtái", uz: "xizmat ko'rsatish stoli", ru: "стойка обслуживания", en: "service desk" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 17, zh: "应该", py: "yīnggāi", uz: "kerak, lozim", ru: "должен, следует", en: "should" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 18, zh: "站", py: "zhàn", uz: "turmoq", ru: "стоять", en: "to stand" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 19, zh: "中间", py: "zhōngjiān", uz: "o'rta", ru: "середина", en: "middle" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 20, zh: "短", py: "duǎn", uz: "qisqa", ru: "короткий", en: "short" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 21, zh: "头发", py: "tóufa", uz: "soch", ru: "волосы", en: "hair" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 22, zh: "年轻", py: "niánqīng", uz: "yosh", ru: "молодой", en: "young" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 23, zh: "发现", py: "fāxiàn", uz: "kashf qilmoq, topmoq", ru: "обнаруживать", en: "to discover, find" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 24, zh: "帮助", py: "bāngzhù", uz: "yordam bermoq", ru: "помогать", en: "to help" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 25, zh: "不见", py: "bújiàn", uz: "yo'qolmoq", ru: "исчезнуть", en: "be lost, disappear" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 26, zh: "照片", py: "zhàopiàn", uz: "rasm", ru: "фотография", en: "photo" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ id: 27, zh: "带", py: "dài", uz: "olib kelmoq, olib yurmoq", ru: "брать с собой, приносить", en: "take, bring, have" }</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const DIALOGUES = [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>title: "Text 1: 在家里 (Uyda / Дома / At home)",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>lines: [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "刘明", zh: "这是杨同乐吗？他怎么跟白家月在一起？", py: "Zhè shì Yáng Tónglè ma? Tā zěnme gēn Bái Jiāyuè zài yīqǐ?", uz: "Bu Yang Tonglemi? Nega u Bai Jiayue bilan birga?", ru: "Это Ян Тунлэ? Почему он вместе с Бай Цзяюэ?", en: "Is this Yang Tongle? Why is he with Bai Jiayue?" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "王一雪", zh: "他不是杨同乐，他叫李文，是白家月的好朋友。", py: "Tā bú shì Yáng Tónglè, tā jiào Lǐ Wén, shì Bái Jiāyuè de hǎo péngyou.", uz: "U Yang Tongle emas, uning ismi Li Wen, u Bai Jiayuening yaqin do'sti.", ru: "Он не Ян Тунлэ, его зовут Ли Вэнь, он хороший друг Бай Цзяюэ.", en: "He is not Yang Tongle, his name is Li Wen, he is Bai Jiayue's good friend." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "刘明", zh: "我还以为是同乐呢，他们看上去有点儿像。", py: "Wǒ hái yǐwéi shì Tónglè ne, tāmen kànshàngqu yǒudiǎnr xiàng.", uz: "Men uni Tongle deb o'ylabman, ular ko'rinishidan bir oz o'xshaydi.", ru: "Я думал, это Тунлэ, они на вид немного похожи.", en: "I thought it was Tongle, they look a bit alike." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "王一雪", zh: "是长得有点儿像，但是他比同乐高，身高有一米八。看起来也比同乐瘦一点儿。", py: "Shì zhǎng de yǒudiǎnr xiàng, dànshì tā bǐ Tónglè gāo, shēnggāo yǒu yìmǐbā. Kànqǐlai yě bǐ Tónglè shòu yìdiǎnr.", uz: "Ha, bir oz o'xshaydi, lekin u Tongledan balandroq, bo'yi bir metru sakson santimetr. Ko'rinishidan Tongledan ozg'inroq ham.", ru: "Да, немного похожи, но он выше Тунлэ, рост метр восемьдесят. На вид он также немного худее Тунлэ.", en: "They do look a bit alike, but he is taller than Tongle, his height is 1.8 meters. He also looks a bit thinner than Tongle." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "刘明", zh: "下个星期家月和李文要来北京，我去机场接他们。", py: "Xià ge xīngqī Jiāyuè hé Lǐ Wén yào lái Běijīng, wǒ qù jīchǎng jiē tāmen.", uz: "Kelasi hafta Jiayue va Li Wen Pokinga kelishadi, men ularni aeroportda kutib olaman.", ru: "На следующей неделе Цзяюэ и Ли Вэнь приезжают в Пекин, я поеду в аэропорт встречать их.", en: "Next week Jiayue and Li Wen are coming to Beijing, I will go to the airport to pick them up." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "王一雪", zh: "他们哪天到北京？我跟你一起去机场接他们吧。", py: "Tāmen nǎ tiān dào Běijīng? Wǒ gēn nǐ yìqǐ qù jīchǎng jiē tāmen ba.", uz: "Ular qaysi kuni Pokinga kelishadi? Men sen bilan birga aeroportga borib ularni kutib olaman.", ru: "В какой день они прибывают в Пекин? Я поеду с тобой в аэропорт встречать их.", en: "Which day are they arriving in Beijing? I will go with you to the airport to pick them up." }</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>title: "Text 2: 在机场 (Aeroportda / В аэропорту / At the airport)",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>lines: [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "白家月", zh: "我的行李怎么还没出来？是不是丢了？", py: "Wǒ de xíngli zěnme hái méi chūlai? Shì bu shì diū le?", uz: "Mening bagajim nega hali chiqmadi? Yo'qoldimi ekan?", ru: "Почему мой багаж все еще не вышел? Он потерялся?", en: "Why hasn't my luggage come out yet? Is it lost?" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "李文", zh: "你的行李箱是什么样的？", py: "Nǐ de xínglixiāng shì shénme yàng de?", uz: "Jomadoningiz qanday ko'rinishda edi?", ru: "Как выглядит твой чемодан?", en: "What does your luggage look like?" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "白家月", zh: "是一个黑色的箱子，上面写着我的名字和电话号码。", py: "Shì yí ge hēisè de xiāngzi, shàngmian xiězhe wǒ de míngzi hé diànhuà hàomǎ.", uz: "U qora jomadon, ustida mening ismim va telefon raqamim yozilgan.", ru: "Это черный чемодан, на нем написано мое имя и номер телефона.", en: "It's a black case, with my name and phone number written on it." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "李文", zh: "我好像在哪儿看到过这个箱子，是不是有人拿错了？", py: "Wǒ hǎoxiàng zài nǎr kàndàoguo zhège xiāngzi, shì bu shì yǒurén ná cuò le?", uz: "Men bu jomadonni qayerdadir ko'rganman shekilli, kimdir adashib olib ketmadimikin?", ru: "Кажется, я где-то видел этот чемодан, может, кто-то взял по ошибке?", en: "I seem to have seen this case somewhere, did someone take it by mistake?" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "白家月", zh: "我们快找谁问一下吧，箱子里有不少重要的东西。", py: "Wǒmen kuài zhǎo shuí wèn yíxià ba, xiāngzi li yǒu bùshǎo zhòngyào de dōngxi.", uz: "Tezroq kimdandir so'raylik, jomadon ichida ko'p muhim narsalar bor.", ru: "Давай скорее найдем кого-нибудь и спросим, в чемодане много важных вещей.", en: "Let's quickly find someone to ask, there are many important things in the case." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "李文", zh: "别着急，我们拿着护照和机票，去服务台问问吧。", py: "Bié zháojí, wǒmen názhe hùzhào hé jīpiào, qù fúwùtái wènwen ba.", uz: "Xavotirlanmang, pasport va chiptalarni olib, xizmat ko'rsatish stoliga borib so'raymiz.", ru: "Не волнуйся, возьмем паспорт и билеты и пойдем к стойке обслуживания спросить.", en: "Don't worry, let's take our passports and plane tickets, and go to the service desk to ask." }</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>title: "Text 3: 在机场大厅 (Aeroport zalida / В зале ожидания / In the airport hall)",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>lines: [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "刘明", zh: "飞机早就到了，你看见白家月他们了吗？", py: "Fēijī zǎo jiù dào le, nǐ kànjiàn Bái Jiāyuè tāmen le ma?", uz: "Samolyot allaqachon keldi, Bai Jiayue va boshqalarni ko'rdingizmi?", ru: "Самолет уже давно прибыл, ты видел Бай Цзяюэ и остальных?", en: "The plane arrived long ago, did you see Bai Jiayue and the others?" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "王一雪", zh: "没有，他们应该快出来了。我们站到中间去吧，这样他们好找一些。", py: "Méiyǒu, tāmen yīnggāi kuài chūlai le. Wǒmen zhàn dào zhōngjiān qù ba, zhèyàng tāmen hǎo zhǎo yìxiē.", uz: "Yo'q, ular tez orada chiqishlari kerak. Biz o'rtaga o'tib turaylik, shunda ularga topish osonroq bo'ladi.", ru: "Нет, они должны скоро выйти. Давай встанем посередине, так им будет легче нас найти.", en: "No, they should be out soon. Let's stand in the middle, it will be easier for them to find us." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "刘明", zh: "你看那个高个子的人是李文吗？", py: "Nǐ kàn nàge gāo gèzi de rén shì Lǐ Wén ma?", uz: "Qarang, anavi baland bo'yli odam Li Wenmi?", ru: "Посмотри, тот высокий человек — это Ли Вэнь?", en: "Look, is that tall person Li Wen?" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "王一雪", zh: "你说的是哪个？那个穿着黑衣服的短头发的年轻人？", py: "Nǐ shuō de shì nǎge? Nàge chuānzhe hēi yīfu de duǎn tóufa de niánqīng rén?", uz: "Qaysi birini aytyapsiz? Qora kiyim kiygan, kalta sochli yosh yigitnimi?", ru: "Ты о ком? О том молодом человеке в черной одежде с короткими волосами?", en: "Which one are you talking about? That young person in black clothes with short hair?" },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ speaker: "刘明", zh: "对，那个人就是李文！你看，家月在他后面呢。", py: "Duì, nàge rén jiùshì Lǐ Wén! Nǐ kàn, Jiāyuè zài tā hòumian ne.", uz: "Ha, o'sha odam Li Wen! Qarang, Jiayue uning orqasida.", ru: "Да, это и есть Ли Вэнь! Смотри, Цзяюэ позади него.", en: "Yes, that person is Li Wen! Look, Jiayue is behind him." }</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>title: "Text 4: 李文的日记 (Li Wenning kundaligi / Дневник Ли Вэня / Li Wen's diary)",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>lines: [</span></p>
-<p class="p7"><span class="s8"><span class="Apple-converted-space">                    </span>{ speaker: "日记", zh: "昨天我到北京了。虽然路上花了十几个小时，但是跟家月坐在一起，我觉得时间过得很快。到机场的时候，家月发现行李箱不见了，我带她去服务台，帮助她找到了行李箱。走出机场的时候，已经八点多了，我们一出来就看见了王老师的姐姐，她看起来比照片上年轻。晚上，一雪姐带我们去吃了一家很好吃的中国菜。", py: "Zuótiān wǒ dào Běijīng le. Suīrán lùshang huā le shí jǐ ge xiǎoshí, dànshì gēn Jiāyuè zuò zài yìqǐ, wǒ juéde shíjiān guò de hěn kuài. Dào jīchǎng de shíhou, Jiāyuè fāxiàn xínglixiāng bújiàn le, wǒ dài tā qù fúwùtái, bāngzhù tā zhǎodào le xínglixiāng. Zǒuchū jīchǎng de shíhou, yǐjīng bā diǎn duō le, wǒmen yī chūlái jiù kànjiàn le Wáng lǎoshī de jiějie, tā kànqǐlai bǐ zhàopiàn shàng niánqīng. Wǎnshang, Yīxuě jiě dài wǒmen qù chī le yì jiā hěn hǎochī de Zhōngguó cài.", uz: "Kecha men Pokinga keldim. Yo'lga o'n necha soat ketgan bo'lsa ham, Jiayue bilan birga o'tirganim uchun vaqt tez o'tgandek tuyuldi. Aeroportga yetib kelganimizda, Jiayue jomadoni yo'qolganini ko'rib qoldi, men uni xizmat ko'rsatish stoliga olib bordim va jomadonini topishga yordam berdim. Aeroportdan chiqqanimizda soat sakkizdan oshgan edi, biz chiqishimiz bilan o'qituvchi Vangning opasini ko'rdik, u rasmda ko'ringanidan yoshroq ko'rinar ekan. Kechqurun Yixue opa bizni juda mazali xitoy taomlari tayyorlanadigan joyga olib bordi.", ru: "Вчера я прибыл в Пекин. Хотя в пути мы провели более десяти часов, сидя вместе с Цзяюэ, мне показалось, что время пролетело очень быстро. Когда мы прибыли в аэропорт, Цзяюэ обнаружила, что ее чемодан пропал, я отвел ее к стойке обслуживания и помог найти чемодан. Когда мы вышли из аэропорта, было уже больше восьми часов, как только мы вышли, мы увидели сестру учителя Ван, она выглядит моложе, чем на фото. Вечером сестра Исюэ отвела нас поесть очень вкусную китайскую еду.", en: "Yesterday I arrived in Beijing. Although the journey took over ten hours, sitting with Jiayue, I felt the time passed very quickly. Upon arriving at the airport, Jiayue found her luggage missing. I took her to the service desk and helped her find her luggage. When we walked out of the airport, it was already past eight o'clock. As soon as we came out, we saw Teacher Wang's sister. She looks younger than in the photo. In the evening, Sister Yixue took us to eat very delicious Chinese food." }</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const GRAMMAR = [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>title: "1. 固定短语 “看上去/看起来” (Ko'rinishidan / На вид / Looks like)",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>uz: "“看上去” va “看起来” iboralari odam yoki narsaning ko'rinishini yoki holatini tasvirlash uchun ishlatiladi.",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>ru: "Фразы «看上去» и «看起来» используются для описания внешнего вида или состояния человека или предмета.",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>en: "The set phrases “看上去” and “看起来” can be used to describe the appearance or condition of a person or an object.",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>examples: [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ zh: "他们看上去有点儿像。", py: "Tāmen kànshàngqu yǒudiǎnr xiàng.", uz: "Ular ko'rinishidan bir oz o'xshaydi." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ zh: "这些菜看起来都很好吃。", py: "Zhèxiē cài kànqǐlai dōu hěn hǎochī.", uz: "Bu ovqatlar ko'rinishidan juda mazali." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ zh: "那个新来的老师看上去很年轻。", py: "Nàge xīn lái de lǎoshī kànshàngqu hěn niánqīng.", uz: "Yangi kelgan o'qituvchi ko'rinishidan juda yosh." }</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>title: "2. 疑问代词的非疑问用法 (So'roq olmoshlarining so'roq bo'lmagan holda ishlatilishi)",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>uz: "“哪儿” (qayerda), “什么” (nima), “谁” (kim), va “哪” (qaysi) kabi so'roq olmoshlari darak gaplarda noaniq joy, narsa yoki odamni ifodalash uchun ishlatilishi mumkin.",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>ru: "Вопросительные местоимения, такие как «哪儿», «什么», «谁» и «哪», могут использоваться в повествовательных предложениях для обозначения неуточненных мест, вещей или людей.",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>en: "Interrogative pronouns such as “哪儿”, “什么”, “谁”, and “哪” can be used in declarative sentences to indicate unspecified places, things, or people.",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>examples: [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ zh: "我好像在哪儿看到过这个箱子。", py: "Wǒ hǎoxiàng zài nǎr kàndàoguo zhège xiāngzi.", uz: "Men bu jomadonni qayerdadir ko'rganman shekilli." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ zh: "你吃点儿什么再走吧。", py: "Nǐ chī diǎnr shénme zài zǒu ba.", uz: "Biror nima yeb, keyin keting." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ zh: "我们哪天一起去踢足球吧。", py: "Wǒmen nǎ tiān yìqǐ qù tī zúqiú ba.", uz: "Biz qaysidir kuni birga futbol o'ynagani boramiz." }</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>title: "3. 多项定语 (Ko'p tarmoqli aniqlovchilar / Multiple Attributives)",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>uz: "Ism oldida bir vaqtning o'zida bir nechta aniqlovchilar kelishi mumkin. Ular odatda vaqt/joy, harakat/holat va xususiyat tartibida joylashadi.",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>ru: "Именная вершина может определяться несколькими атрибутами одновременно. Обычно они располагаются в порядке: время/место, действие/состояние, характеристика.",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>en: "A nominal head can be modified by multiple attributives simultaneously. They are generally arranged in the order of time/location, action/state, and characteristic.",</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>examples: [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ zh: "那个穿着黑衣服的短头发的年轻人", py: "Nàge chuānzhe hēi yīfu de duǎn tóufa de niánqīng rén", uz: "Qora kiyim kiygan, kalta sochli yosh yigit." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ zh: "昨天和家月一起看电影的两个人是我的朋友。", py: "Zuótiān hé Jiāyuè yìqǐ kàn diànyǐng de liǎng ge rén shì wǒ de péngyou.", uz: "Kecha Jiayue bilan birga kino ko'rgan ikki kishi mening do'stlarimdir." },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ zh: "我那件新买的白色的衣服在哪儿？", py: "Wǒ nà jiàn xīn mǎi de báisè de yīfu zài nǎr?", uz: "Mening yangi sotib olingan oq kiyimim qayerda?" }</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const VOCAB_TEST = [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "以为", options: ["o'ylamoq, xisoblamoq", "o'xshamoq", "o'smoq", "pasport"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "像", options: ["raqam", "o'xshamoq", "bo'y", "bagaj"], correct: 1 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "长", options: ["kutib olmoq", "yordam bermoq", "o'smoq, rivojlanmoq", "yo'qotmoq"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "身高", options: ["metr", "qisqa", "muhim", "bo'y"], correct: 3 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "米", options: ["metr", "soch", "xavotirlanmoq", "rasm"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "瘦", options: ["yosh", "ozg'in", "turmoq", "o'rta"], correct: 1 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "接", options: ["qisqa", "kerak", "kutib olmoq", "olib kelmoq"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "行李", options: ["xizmat ko'rsatish stoli", "jomadon", "pasport", "bagaj, yuk"], correct: 3 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "丢", options: ["yo'qotmoq", "kashf qilmoq", "o'xshaydi", "turmoq"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "箱子", options: ["muhim", "jomadon, quti", "rasm", "bagaj, yuk"], correct: 1 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "号码", options: ["o'rta", "yo'qolmoq", "raqam", "soch"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "好像", options: ["kerak", "qisqa", "yordam bermoq", "o'xshaydi, go'yo"], correct: 3 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "重要", options: ["muhim", "xavotirlanmoq", "ozg'in", "yosh"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "着急", options: ["kutib olmoq", "xavotirlanmoq", "olib kelmoq", "yo'qotmoq"], correct: 1 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "护照", options: ["raqam", "bagaj, yuk", "pasport", "rasm"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "服务台", options: ["jomadon", "pasport", "xizmat ko'rsatish stoli", "metr"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "应该", options: ["kerak, lozim", "muhim", "qisqa", "o'rta"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "站", options: ["o'xshamoq", "turmoq", "kashf qilmoq", "o'ylamoq"], correct: 1 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "中间", options: ["o'xshaydi", "yosh", "o'rta", "soch"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "短", options: ["bo'y", "ozg'in", "muhim", "qisqa"], correct: 3 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "头发", options: ["soch", "rasm", "pasport", "raqam"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "年轻", options: ["qisqa", "yosh", "muhim", "o'xshaydi"], correct: 1 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "发现", options: ["o'smoq", "yo'qotmoq", "kashf qilmoq, topmoq", "kutib olmoq"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "帮助", options: ["turmoq", "olib kelmoq", "xavotirlanmoq", "yordam bermoq"], correct: 3 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "不见", options: ["yo'qolmoq", "o'ylamoq", "o'xshamoq", "topmoq"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "照片", options: ["pasport", "rasm", "bagaj", "jomadon"], correct: 1 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "带", options: ["turmoq", "yo'qotmoq", "olib kelmoq, olib yurmoq", "yordam bermoq"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const GRAMMAR_TEST = [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "A: 你怎么了？今天___很累。 B: 昨天没睡好。", options: ["看上去", "看见", "看着"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "这些菜___都很好吃。", options: ["看看", "看起来", "看见"], correct: 1 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "我好像在___看到过这个箱子。", options: ["哪儿", "那儿", "这儿"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "你吃点儿___再走吧。", options: ["什么", "怎么", "为什么"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "我们___天一起去踢足球吧。", options: ["这", "那", "哪"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "李文是那个穿着黑衣服___短头发的年轻人吗？", options: ["得", "的", "地"], correct: 1 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "昨天和家月一起看电影的___是我的朋友。", options: ["两个人", "两的人", "个人两"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "我那件___白色的衣服在哪儿？", options: ["新买的", "买新的", "的买新"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "那本___书是我最喜欢的。", options: ["买昨天得", "昨天的买", "昨天买的"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "那个___的人是李文吗？", options: ["高个子", "个子高", "高的高"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "有时间了来我家，我做点儿___给你吃。", options: ["什么", "怎么", "哪儿"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "这几天太累了，我想去___休息一下。", options: ["谁", "什么", "哪儿"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "我们是不是走错了？我也不知道，我去问问___。", options: ["谁", "什么", "哪儿"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "那个___新来的老师。", options: ["看上去很年轻的", "很年轻看上去的", "的看上去很年轻"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "他比同乐高，身高有___。", options: ["一八米", "一米八", "八米一"], correct: 1 }</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const FILL_BLANKS = [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "服务台在前面，我们过去___吧。(ask/inquire)", options: ["问问", "接", "带", "长"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "他已经到了，我们快出去___他吧。(pick up)", options: ["丢", "接", "想", "站"], correct: 1 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "我的护照不见了，是不是在机场___了？(lost)", options: ["发", "带", "丢", "看"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "行李票很___，你们出机场的时候有人看。(important)", options: ["着急", "年轻", "短", "重要"], correct: 3 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "我___了两个行李箱和一个大包，所以走得非常慢。(take/bring)", options: ["带", "接", "发", "找"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "A: 这个头发很短的男孩儿是我弟弟。 B: 我___这个是你，你们长得太像了。(thought)", options: ["像", "以为", "丢", "长"], correct: 1 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "A: 我___坐飞机来北京的人非常多。 B: 对，很多人这个时候来北京旅游。(seemingly)", options: ["发现", "以为", "好像", "着急"], correct: 2 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "A: 这是我和哥哥的照片，你看我们___吗？ B: 你们很像。(alike/similar)", options: ["短", "瘦", "长", "像"], correct: 3 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "你的行李箱找到了，谢谢您的___！(help)", options: ["帮助", "护照", "号码", "中间"], correct: 0 },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{ q: "那个穿着黑衣服的___子的人是王老师吗？(height/stature)", options: ["发", "个", "箱", "米"], correct: 1 }</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>// --- COMPONENTS ---</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const playAudio = (text) =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>if ('speechSynthesis' in window) {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>const utterance = new SpeechSynthesisUtterance(text);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>utterance.lang = 'zh-CN';</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>utterance.rate = 0.85;<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>window.speechSynthesis.speak(utterance);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const Flashcards = () =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const [currentIndex, setCurrentIndex] = useState(0);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const [isFlipped, setIsFlipped] = useState(false);</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const nextCard = () =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setIsFlipped(false);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setCurrentIndex((prev) =&gt; (prev + 1) % VOCABULARY.length);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const prevCard = () =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setIsFlipped(false);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setCurrentIndex((prev) =&gt; (prev === 0 ? VOCABULARY.length - 1 : prev - 1));</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const word = VOCABULARY[currentIndex];</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>return (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div className="flex flex-col items-center justify-center space-y-8 p-6"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="text-slate-300 text-lg font-medium tracking-wide"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>So'z {currentIndex + 1} / {VOCABULARY.length}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>className="w-full max-w-md h-80 relative perspective-1000 cursor-pointer"</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>onClick={() =&gt; setIsFlipped(!isFlipped)}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className={`w-full h-full transition-transform duration-500 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div className="absolute w-full h-full backface-hidden bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl flex flex-col items-center justify-center p-8"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;h2 className="text-8xl font-bold text-amber-400 mb-6 drop-shadow-md"&gt;{word.zh}&lt;/h2&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>onClick={(e) =&gt; { e.stopPropagation(); playAudio(word.zh); }}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>className="p-3 bg-white/10 hover:bg-white/20 rounded-full text-slate-200 transition-colors"</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>title="Tinglash (Listen)"</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;Volume2 size={28} /&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/button&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div className="absolute w-full h-full backface-hidden rotate-y-180 bg-slate-800 border border-white/20 rounded-3xl shadow-2xl flex flex-col items-center justify-center p-8 space-y-4"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;p className="text-3xl font-semibold text-amber-300 mb-2"&gt;{word.py}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;div className="w-full h-px bg-slate-600 my-2"&gt;&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;p className="text-xl text-slate-200 text-center"&gt;&lt;span className="text-slate-400 text-sm block mb-1"&gt;Uzbek&lt;/span&gt;{word.uz}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;p className="text-lg text-slate-300 text-center"&gt;&lt;span className="text-slate-400 text-sm block mb-1"&gt;Русский&lt;/span&gt;{word.ru}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;p className="text-lg text-slate-300 text-center"&gt;&lt;span className="text-slate-400 text-sm block mb-1"&gt;English&lt;/span&gt;{word.en}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="flex items-center space-x-6"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;button onClick={prevCard} className="p-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-amber-400 transition-colors"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;ChevronLeft size={32} /&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;button onClick={nextCard} className="p-4 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/50 rounded-full text-amber-400 transition-colors shadow-[0_0_15px_rgba(245,158,11,0.2)]"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;ChevronRight size={32} /&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const QuizComponent = ({ data, isVocab }) =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const [currentQ, setCurrentQ] = useState(0);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const [score, setScore] = useState(0);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const [showResult, setShowResult] = useState(false);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const [selectedOpt, setSelectedOpt] = useState(null);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const [isAnswered, setIsAnswered] = useState(false);</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const handleOptionClick = (index) =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>if (isAnswered) return;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setSelectedOpt(index);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setIsAnswered(true);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>if (index === data[currentQ].correct) setScore(score + 1);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const nextQuestion = () =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>if (currentQ + 1 &lt; data.length) {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>setCurrentQ(currentQ + 1);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>setSelectedOpt(null);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>setIsAnswered(false);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>} else {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>setShowResult(true);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const resetQuiz = () =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setCurrentQ(0);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setScore(0);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setShowResult(false);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setSelectedOpt(null);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setIsAnswered(false);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>if (showResult) {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>return (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="flex flex-col items-center justify-center p-12 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 max-w-2xl mx-auto mt-10"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;h2 className="text-4xl font-bold text-slate-100 mb-6"&gt;Natija (Result)&lt;/h2&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="text-7xl font-black text-amber-400 mb-8 drop-shadow-lg"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{score} / {data.length}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;p className="text-xl text-slate-300 mb-8"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{score === data.length ? "Ajoyib! (Perfect!) 🎉" : "Yana harakat qilib ko'ring! (Keep trying!) 💪"}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;button onClick={resetQuiz} className="flex items-center px-8 py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold rounded-full transition-all transform hover:scale-105"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;RotateCcw className="mr-2" size={24} /&gt; Qaytadan boshlash (Restart)</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const q = data[currentQ];</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>return (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div className="max-w-3xl mx-auto mt-8"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="flex justify-between items-center mb-6 text-slate-300"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span className="text-lg font-semibold tracking-wider"&gt;Savol (Question) {currentQ + 1} / {data.length}&lt;/span&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span className="text-lg font-semibold text-amber-400"&gt;To'g'ri (Score): {score}&lt;/span&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="bg-white/10 backdrop-blur-xl border border-white/20 p-10 rounded-3xl mb-8 shadow-xl"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;h3 className={`text-center font-bold text-amber-400 mb-4 ${isVocab ? 'text-8xl' : 'text-4xl leading-relaxed'}`}&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{q.q}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/h3&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="grid grid-cols-1 md:grid-cols-2 gap-4"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>{q.options.map((opt, idx) =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>let btnClass = "p-5 rounded-2xl border-2 text-left text-lg font-medium transition-all duration-300 ";</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>if (!isAnswered) {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>btnClass += "bg-slate-800/50 border-slate-600 hover:bg-slate-700 hover:border-amber-400/50 text-slate-200 cursor-pointer hover:shadow-lg hover:-translate-y-1";</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>} else {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>if (idx === q.correct) {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>btnClass += "bg-green-500/20 border-green-500 text-green-300 shadow-[0_0_15px_rgba(34,197,94,0.3)]";</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>} else if (idx === selectedOpt) {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>btnClass += "bg-red-500/20 border-red-500 text-red-300";</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>} else {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>btnClass += "bg-slate-800/30 border-slate-700/50 text-slate-500 opacity-50";</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>}</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>return (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>key={idx}<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>onClick={() =&gt; handleOptionClick(idx)}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>className={btnClass}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>disabled={isAnswered}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;div className="flex justify-between items-center"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;span&gt;{opt}&lt;/span&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>{isAnswered &amp;&amp; idx === q.correct &amp;&amp; &lt;CheckCircle className="text-green-400" /&gt;}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>{isAnswered &amp;&amp; idx === selectedOpt &amp;&amp; idx !== q.correct &amp;&amp; &lt;XCircle className="text-red-400" /&gt;}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/button&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>})}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{isAnswered &amp;&amp; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="mt-8 flex justify-center animate-fade-in-up"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>onClick={nextQuestion}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>className="flex items-center px-10 py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold rounded-full transition-all shadow-lg hover:shadow-amber-500/30"</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>Keyingisi (Next) &lt;ChevronRight className="ml-2" /&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/button&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>)}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const Dialogues = () =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>return (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div className="max-w-4xl mx-auto space-y-12 pb-12"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{DIALOGUES.map((dialogue, idx) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div key={idx} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden shadow-2xl"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div className="bg-slate-800/80 px-8 py-5 border-b border-white/10"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;h3 className="text-2xl font-bold text-amber-400"&gt;{dialogue.title}&lt;/h3&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div className="p-8 space-y-6"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>{dialogue.lines.map((line, lIdx) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;div key={lIdx} className="flex gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors group"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;div className="flex-shrink-0 pt-1"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                                </span>onClick={() =&gt; playAudio(line.zh)}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                                </span>className="p-2 bg-slate-700 text-slate-300 rounded-full group-hover:bg-amber-500 group-hover:text-slate-900 transition-colors"</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;Volume2 size={20} /&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;/button&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;div className="flex-1 space-y-2"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;p className="text-sm font-semibold text-amber-500/80 uppercase tracking-wider"&gt;{line.speaker}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;p className="text-2xl font-medium text-slate-100"&gt;{line.zh}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;p className="text-lg text-amber-200/80 font-mono"&gt;{line.py}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;div className="space-y-1 pt-2 mt-2 border-t border-slate-700/50 text-sm"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;p className="text-slate-300"&gt;&lt;span className="text-slate-500 w-8 inline-block"&gt;UZ:&lt;/span&gt; {line.uz}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;p className="text-slate-300"&gt;&lt;span className="text-slate-500 w-8 inline-block"&gt;RU:&lt;/span&gt; {line.ru}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;p className="text-slate-300"&gt;&lt;span className="text-slate-500 w-8 inline-block"&gt;EN:&lt;/span&gt; {line.en}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>))}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>))}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const Grammar = () =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>return (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div className="max-w-4xl mx-auto space-y-10 pb-12"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{GRAMMAR.map((rule, idx) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div key={idx} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-xl"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h3 className="text-2xl font-bold text-amber-400 mb-6 pb-4 border-b border-white/10"&gt;{rule.title}&lt;/h3&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div className="space-y-3 mb-8 text-slate-300"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;p&gt;&lt;span className="font-semibold text-slate-400 mr-2"&gt;UZ:&lt;/span&gt;{rule.uz}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;p&gt;&lt;span className="font-semibold text-slate-400 mr-2"&gt;RU:&lt;/span&gt;{rule.ru}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;p&gt;&lt;span className="font-semibold text-slate-400 mr-2"&gt;EN:&lt;/span&gt;{rule.en}&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div className="bg-slate-900/50 rounded-2xl p-6 border border-slate-700/50"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4"&gt;Misollar (Examples)&lt;/h4&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;ul className="space-y-5"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>{rule.examples.map((ex, eIdx) =&gt; (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;li key={eIdx} className="flex flex-col space-y-1 border-l-2 border-amber-500/50 pl-4"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;div className="flex items-center space-x-3"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;button onClick={() =&gt; playAudio(ex.zh)} className="text-slate-400 hover:text-amber-400 transition-colors"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                                    </span>&lt;Volume2 size={18} /&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;/button&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                                </span>&lt;span className="text-xl font-medium text-slate-100"&gt;{ex.zh}&lt;/span&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;span className="text-amber-200/70 ml-7"&gt;{ex.py}&lt;/span&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>&lt;span className="text-slate-400 text-sm ml-7 italic"&gt;{ex.uz}&lt;/span&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;/li&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>))}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/ul&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>))}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>// --- MAIN APP ---</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const App = () =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const [activeTab, setActiveTab] = useState('flashcards');</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const tabs = [</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 'flashcards', label: "Lug'at", icon: BookOpen },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 'dialogues', label: "Muloqot", icon: MessageCircle },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 'grammar', label: "Grammatika", icon: BookText },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 'vocabTest', label: "Lug'at Testi", icon: FileQuestion },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 'grammarTest', label: "Grammatika Testi", icon: HelpCircle },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 'fillBlanks', label: "So'zlarni To'ldirish", icon: PenTool },</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>];</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>return (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;header className="pt-12 pb-8 px-6 text-center border-b border-white/5 bg-slate-900/20 shadow-lg backdrop-blur-sm sticky top-0 z-10"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;h1 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500 mb-4 drop-shadow-sm"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>我们去机场接你们 (We will pick you up at the airport)</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/h1&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;h2 className="text-lg md:text-xl font-medium text-indigo-200/80 tracking-wide"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>Dilfuza Kāng lǎo shī bilan xitoy tilini o'rganmiz</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/h2&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/header&gt;</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;main className="container mx-auto px-4 py-8 min-h-[calc(100vh-250px)]"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="flex flex-wrap justify-center gap-3 mb-10"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{tabs.map((tab) =&gt; {</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>const Icon = tab.icon;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>const isActive = activeTab === tab.id;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>return (</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;button</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>key={tab.id}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>onClick={() =&gt; setActiveTab(tab.id)}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>className={`flex items-center px-5 py-3 rounded-full text-sm font-semibold transition-all duration-300<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                            </span>${isActive<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                                </span>? 'bg-amber-500 text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] scale-105'<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                                </span>: 'bg-white/5 text-slate-400 hover:bg-white/10 hover:text-slate-200 border border-white/5 hover:border-white/20'}`}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;Icon size={18} className="mr-2" /&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>{tab.label}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;/button&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>})}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="animate-fade-in-up"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{activeTab === 'flashcards' &amp;&amp; &lt;Flashcards /&gt;}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{activeTab === 'dialogues' &amp;&amp; &lt;Dialogues /&gt;}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{activeTab === 'grammar' &amp;&amp; &lt;Grammar /&gt;}</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">                            </span></span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{/* MUST ADD KEY PROP TO PREVENT COMPONENT CRASHES ON TAB SWITCH */}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{activeTab === 'vocabTest' &amp;&amp; &lt;QuizComponent key="vocab" data={VOCAB_TEST} isVocab={true} /&gt;}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{activeTab === 'grammarTest' &amp;&amp; &lt;QuizComponent key="grammar" data={GRAMMAR_TEST} isVocab={false} /&gt;}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{activeTab === 'fillBlanks' &amp;&amp; &lt;QuizComponent key="fill" data={FILL_BLANKS} isVocab={false} /&gt;}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/main&gt;</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;footer className="border-t border-white/10 bg-slate-950/80 backdrop-blur-lg py-8 text-center"&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;p className="text-slate-400 font-medium tracking-wide"&gt;HSK 3 NEW3.0 - Lesson 1&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;p className="text-slate-500 mt-2 text-sm"&gt;© 2026 Dilfuza Kāng lǎo shī (telegram@diffila)&lt;/p&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/footer&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p6"><span class="s8"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const root = ReactDOM.createRoot(document.getElementById('root'));</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>root.render(&lt;App /&gt;);</span></p>
-<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+<body class="bg-slate-950 text-slate-200 font-sans selection:bg-amber-500/30 overflow-x-hidden min-h-screen">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // --- ICONS (Replaced lucide-react with inline SVGs for standalone HTML) ---
+        const Volume2 = ({ size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+        );
+        const ChevronRight = ({ size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="9 18 15 12 9 6"></polyline></svg>
+        );
+        const ChevronLeft = ({ size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="15 18 9 12 15 6"></polyline></svg>
+        );
+        const CheckCircle = ({ size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        );
+        const XCircle = ({ size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+        );
+        const RotateCcw = ({ size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+        );
+        const BookOpen = ({ size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+        );
+        const MessageCircle = ({ size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        );
+        const BookText = ({ size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path><path d="M8 7h6"></path><path d="M8 11h8"></path></svg>
+        );
+        const FileQuestion = ({ size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><circle cx="12" cy="17" r="1"></circle><path d="M12 14v-2c1.5 0 2.5-1 2.5-2.5S13.5 7 12 7 9.5 8 9.5 9.5"></path></svg>
+        );
+        const HelpCircle = ({ size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        );
+        const PenTool = ({ size = 24, className = "" }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+        );
+
+        // --- DATA ---
+        const VOCABULARY = [
+            { id: 1, zh: "以为", py: "yǐwéi", uz: "o'ylamoq, xisoblamoq", ru: "думать, полагать", en: "to think, consider" },
+            { id: 2, zh: "像", py: "xiàng", uz: "o'xshamoq", ru: "быть похожим", en: "to be like" },
+            { id: 3, zh: "长", py: "zhǎng", uz: "o'smoq, rivojlanmoq", ru: "расти, развиваться", en: "to grow, develop" },
+            { id: 4, zh: "身高", py: "shēnggāo", uz: "bo'y", ru: "рост", en: "height" },
+            { id: 5, zh: "米", py: "mǐ", uz: "metr", ru: "метр", en: "meter" },
+            { id: 6, zh: "瘦", py: "shòu", uz: "ozg'in", ru: "худой", en: "thin" },
+            { id: 7, zh: "接", py: "jiē", uz: "kutib olmoq", ru: "встречать", en: "to meet, pick up" },
+            { id: 8, zh: "行李", py: "xíngli", uz: "bagaj, yuk", ru: "багаж", en: "luggage" },
+            { id: 9, zh: "丢", py: "diū", uz: "yo'qotmoq", ru: "терять", en: "to lose" },
+            { id: 10, zh: "箱子", py: "xiāngzi", uz: "jomadon, quti", ru: "чемодан, ящик", en: "case, trunk" },
+            { id: 11, zh: "号码", py: "hàomǎ", uz: "raqam", ru: "номер", en: "number" },
+            { id: 12, zh: "好像", py: "hǎoxiàng", uz: "o'xshaydi, go'yo", ru: "кажется, похоже", en: "seemingly" },
+            { id: 13, zh: "重要", py: "zhòngyào", uz: "muhim", ru: "важный", en: "important" },
+            { id: 14, zh: "着急", py: "zháojí", uz: "xavotirlanmoq", ru: "волноваться", en: "worried, anxious" },
+            { id: 15, zh: "护照", py: "hùzhào", uz: "pasport", ru: "паспорт", en: "passport" },
+            { id: 16, zh: "服务台", py: "fúwùtái", uz: "xizmat ko'rsatish stoli", ru: "стойка обслуживания", en: "service desk" },
+            { id: 17, zh: "应该", py: "yīnggāi", uz: "kerak, lozim", ru: "должен, следует", en: "should" },
+            { id: 18, zh: "站", py: "zhàn", uz: "turmoq", ru: "стоять", en: "to stand" },
+            { id: 19, zh: "中间", py: "zhōngjiān", uz: "o'rta", ru: "середина", en: "middle" },
+            { id: 20, zh: "短", py: "duǎn", uz: "qisqa", ru: "короткий", en: "short" },
+            { id: 21, zh: "头发", py: "tóufa", uz: "soch", ru: "волосы", en: "hair" },
+            { id: 22, zh: "年轻", py: "niánqīng", uz: "yosh", ru: "молодой", en: "young" },
+            { id: 23, zh: "发现", py: "fāxiàn", uz: "kashf qilmoq, topmoq", ru: "обнаруживать", en: "to discover, find" },
+            { id: 24, zh: "帮助", py: "bāngzhù", uz: "yordam bermoq", ru: "помогать", en: "to help" },
+            { id: 25, zh: "不见", py: "bújiàn", uz: "yo'qolmoq", ru: "исчезнуть", en: "be lost, disappear" },
+            { id: 26, zh: "照片", py: "zhàopiàn", uz: "rasm", ru: "фотография", en: "photo" },
+            { id: 27, zh: "带", py: "dài", uz: "olib kelmoq, olib yurmoq", ru: "брать с собой, приносить", en: "take, bring, have" }
+        ];
+
+        const DIALOGUES = [
+            {
+                title: "Text 1: 在家里 (Uyda / Дома / At home)",
+                lines: [
+                    { speaker: "刘明", zh: "这是杨同乐吗？他怎么跟白家月在一起？", py: "Zhè shì Yáng Tónglè ma? Tā zěnme gēn Bái Jiāyuè zài yīqǐ?", uz: "Bu Yang Tonglemi? Nega u Bai Jiayue bilan birga?", ru: "Это Ян Тунлэ? Почему он вместе с Бай Цзяюэ?", en: "Is this Yang Tongle? Why is he with Bai Jiayue?" },
+                    { speaker: "王一雪", zh: "他不是杨同乐，他叫李文，是白家月的好朋友。", py: "Tā bú shì Yáng Tónglè, tā jiào Lǐ Wén, shì Bái Jiāyuè de hǎo péngyou.", uz: "U Yang Tongle emas, uning ismi Li Wen, u Bai Jiayuening yaqin do'sti.", ru: "Он не Ян Тунлэ, его зовут Ли Вэнь, он хороший друг Бай Цзяюэ.", en: "He is not Yang Tongle, his name is Li Wen, he is Bai Jiayue's good friend." },
+                    { speaker: "刘明", zh: "我还以为是同乐呢，他们看上去有点儿像。", py: "Wǒ hái yǐwéi shì Tónglè ne, tāmen kànshàngqu yǒudiǎnr xiàng.", uz: "Men uni Tongle deb o'ylabman, ular ko'rinishidan bir oz o'xshaydi.", ru: "Я думал, это Тунлэ, они на вид немного похожи.", en: "I thought it was Tongle, they look a bit alike." },
+                    { speaker: "王一雪", zh: "是长得有点儿像，但是他比同乐高，身高有一米八。看起来也比同乐瘦一点儿。", py: "Shì zhǎng de yǒudiǎnr xiàng, dànshì tā bǐ Tónglè gāo, shēnggāo yǒu yìmǐbā. Kànqǐlai yě bǐ Tónglè shòu yìdiǎnr.", uz: "Ha, bir oz o'xshaydi, lekin u Tongledan balandroq, bo'yi bir metru sakson santimetr. Ko'rinishidan Tongledan ozg'inroq ham.", ru: "Да, немного похожи, но он выше Тунлэ, рост метр восемьдесят. На вид он также немного худее Тунлэ.", en: "They do look a bit alike, but he is taller than Tongle, his height is 1.8 meters. He also looks a bit thinner than Tongle." },
+                    { speaker: "刘明", zh: "下个星期家月和李文要来北京，我去机场接他们。", py: "Xià ge xīngqī Jiāyuè hé Lǐ Wén yào lái Běijīng, wǒ qù jīchǎng jiē tāmen.", uz: "Kelasi hafta Jiayue va Li Wen Pokinga kelishadi, men ularni aeroportda kutib olaman.", ru: "На следующей неделе Цзяюэ и Ли Вэнь приезжают в Пекин, я поеду в аэропорт встречать их.", en: "Next week Jiayue and Li Wen are coming to Beijing, I will go to the airport to pick them up." },
+                    { speaker: "王一雪", zh: "他们哪天到北京？我跟你一起去机场接他们吧。", py: "Tāmen nǎ tiān dào Běijīng? Wǒ gēn nǐ yìqǐ qù jīchǎng jiē tāmen ba.", uz: "Ular qaysi kuni Pokinga kelishadi? Men sen bilan birga aeroportga borib ularni kutib olaman.", ru: "В какой день они прибывают в Пекин? Я поеду с тобой в аэропорт встречать их.", en: "Which day are they arriving in Beijing? I will go with you to the airport to pick them up." }
+                ]
+            },
+            {
+                title: "Text 2: 在机场 (Aeroportda / В аэропорту / At the airport)",
+                lines: [
+                    { speaker: "白家月", zh: "我的行李怎么还没出来？是不是丢了？", py: "Wǒ de xíngli zěnme hái méi chūlai? Shì bu shì diū le?", uz: "Mening bagajim nega hali chiqmadi? Yo'qoldimi ekan?", ru: "Почему мой багаж все еще не вышел? Он потерялся?", en: "Why hasn't my luggage come out yet? Is it lost?" },
+                    { speaker: "李文", zh: "你的行李箱是什么样的？", py: "Nǐ de xínglixiāng shì shénme yàng de?", uz: "Jomadoningiz qanday ko'rinishda edi?", ru: "Как выглядит твой чемодан?", en: "What does your luggage look like?" },
+                    { speaker: "白家月", zh: "是一个黑色的箱子，上面写着我的名字和电话号码。", py: "Shì yí ge hēisè de xiāngzi, shàngmian xiězhe wǒ de míngzi hé diànhuà hàomǎ.", uz: "U qora jomadon, ustida mening ismim va telefon raqamim yozilgan.", ru: "Это черный чемодан, на нем написано мое имя и номер телефона.", en: "It's a black case, with my name and phone number written on it." },
+                    { speaker: "李文", zh: "我好像在哪儿看到过这个箱子，是不是有人拿错了？", py: "Wǒ hǎoxiàng zài nǎr kàndàoguo zhège xiāngzi, shì bu shì yǒurén ná cuò le?", uz: "Men bu jomadonni qayerdadir ko'rganman shekilli, kimdir adashib olib ketmadimikin?", ru: "Кажется, я где-то видел этот чемодан, может, кто-то взял по ошибке?", en: "I seem to have seen this case somewhere, did someone take it by mistake?" },
+                    { speaker: "白家月", zh: "我们快找谁问一下吧，箱子里有不少重要的东西。", py: "Wǒmen kuài zhǎo shuí wèn yíxià ba, xiāngzi li yǒu bùshǎo zhòngyào de dōngxi.", uz: "Tezroq kimdandir so'raylik, jomadon ichida ko'p muhim narsalar bor.", ru: "Давай скорее найдем кого-нибудь и спросим, в чемодане много важных вещей.", en: "Let's quickly find someone to ask, there are many important things in the case." },
+                    { speaker: "李文", zh: "别着急，我们拿着护照和机票，去服务台问问吧。", py: "Bié zháojí, wǒmen názhe hùzhào hé jīpiào, qù fúwùtái wènwen ba.", uz: "Xavotirlanmang, pasport va chiptalarni olib, xizmat ko'rsatish stoliga borib so'raymiz.", ru: "Не волнуйся, возьмем паспорт и билеты и пойдем к стойке обслуживания спросить.", en: "Don't worry, let's take our passports and plane tickets, and go to the service desk to ask." }
+                ]
+            },
+            {
+                title: "Text 3: 在机场大厅 (Aeroport zalida / В зале ожидания / In the airport hall)",
+                lines: [
+                    { speaker: "刘明", zh: "飞机早就到了，你看见白家月他们了吗？", py: "Fēijī zǎo jiù dào le, nǐ kànjiàn Bái Jiāyuè tāmen le ma?", uz: "Samolyot allaqachon keldi, Bai Jiayue va boshqalarni ko'rdingizmi?", ru: "Самолет уже давно прибыл, ты видел Бай Цзяюэ и остальных?", en: "The plane arrived long ago, did you see Bai Jiayue and the others?" },
+                    { speaker: "王一雪", zh: "没有，他们应该快出来了。我们站到中间去吧，这样他们好找一些。", py: "Méiyǒu, tāmen yīnggāi kuài chūlai le. Wǒmen zhàn dào zhōngjiān qù ba, zhèyàng tāmen hǎo zhǎo yìxiē.", uz: "Yo'q, ular tez orada chiqishlari kerak. Biz o'rtaga o'tib turaylik, shunda ularga topish osonroq bo'ladi.", ru: "Нет, они должны скоро выйти. Давай встанем посередине, так им будет легче нас найти.", en: "No, they should be out soon. Let's stand in the middle, it will be easier for them to find us." },
+                    { speaker: "刘明", zh: "你看那个高个子的人是李文吗？", py: "Nǐ kàn nàge gāo gèzi de rén shì Lǐ Wén ma?", uz: "Qarang, anavi baland bo'yli odam Li Wenmi?", ru: "Посмотри, тот высокий человек — это Ли Вэнь?", en: "Look, is that tall person Li Wen?" },
+                    { speaker: "王一雪", zh: "你说的是哪个？那个穿着黑衣服的短头发的年轻人？", py: "Nǐ shuō de shì nǎge? Nàge chuānzhe hēi yīfu de duǎn tóufa de niánqīng rén?", uz: "Qaysi birini aytyapsiz? Qora kiyim kiygan, kalta sochli yosh yigitnimi?", ru: "Ты о ком? О том молодом человеке в черной одежде с короткими волосами?", en: "Which one are you talking about? That young person in black clothes with short hair?" },
+                    { speaker: "刘明", zh: "对，那个人就是李文！你看，家月在他后面呢。", py: "Duì, nàge rén jiùshì Lǐ Wén! Nǐ kàn, Jiāyuè zài tā hòumian ne.", uz: "Ha, o'sha odam Li Wen! Qarang, Jiayue uning orqasida.", ru: "Да, это и есть Ли Вэнь! Смотри, Цзяюэ позади него.", en: "Yes, that person is Li Wen! Look, Jiayue is behind him." }
+                ]
+            },
+            {
+                title: "Text 4: 李文的日记 (Li Wenning kundaligi / Дневник Ли Вэня / Li Wen's diary)",
+                lines: [
+                    { speaker: "日记", zh: "昨天我到北京了。虽然路上花了十几个小时，但是跟家月坐在一起，我觉得时间过得很快。到机场的时候，家月发现行李箱不见了，我带她去服务台，帮助她找到了行李箱。走出机场的时候，已经八点多了，我们一出来就看见了王老师的姐姐，她看起来比照片上年轻。晚上，一雪姐带我们去吃了一家很好吃的中国菜。", py: "Zuótiān wǒ dào Běijīng le. Suīrán lùshang huā le shí jǐ ge xiǎoshí, dànshì gēn Jiāyuè zuò zài yìqǐ, wǒ juéde shíjiān guò de hěn kuài. Dào jīchǎng de shíhou, Jiāyuè fāxiàn xínglixiāng bújiàn le, wǒ dài tā qù fúwùtái, bāngzhù tā zhǎodào le xínglixiāng. Zǒuchū jīchǎng de shíhou, yǐjīng bā diǎn duō le, wǒmen yī chūlái jiù kànjiàn le Wáng lǎoshī de jiějie, tā kànqǐlai bǐ zhàopiàn shàng niánqīng. Wǎnshang, Yīxuě jiě dài wǒmen qù chī le yì jiā hěn hǎochī de Zhōngguó cài.", uz: "Kecha men Pokinga keldim. Yo'lga o'n necha soat ketgan bo'lsa ham, Jiayue bilan birga o'tirganim uchun vaqt tez o'tgandek tuyuldi. Aeroportga yetib kelganimizda, Jiayue jomadoni yo'qolganini ko'rib qoldi, men uni xizmat ko'rsatish stoliga olib bordim va jomadonini topishga yordam berdim. Aeroportdan chiqqanimizda soat sakkizdan oshgan edi, biz chiqishimiz bilan o'qituvchi Vangning opasini ko'rdik, u rasmda ko'ringanidan yoshroq ko'rinar ekan. Kechqurun Yixue opa bizni juda mazali xitoy taomlari tayyorlanadigan joyga olib bordi.", ru: "Вчера я прибыл в Пекин. Хотя в пути мы провели более десяти часов, сидя вместе с Цзяюэ, мне показалось, что время пролетело очень быстро. Когда мы прибыли в аэропорт, Цзяюэ обнаружила, что ее чемодан пропал, я отвел ее к стойке обслуживания и помог найти чемодан. Когда мы вышли из аэропорта, было уже больше восьми часов, как только мы вышли, мы увидели сестру учителя Ван, она выглядит моложе, чем на фото. Вечером сестра Исюэ отвела нас поесть очень вкусную китайскую еду.", en: "Yesterday I arrived in Beijing. Although the journey took over ten hours, sitting with Jiayue, I felt the time passed very quickly. Upon arriving at the airport, Jiayue found her luggage missing. I took her to the service desk and helped her find her luggage. When we walked out of the airport, it was already past eight o'clock. As soon as we came out, we saw Teacher Wang's sister. She looks younger than in the photo. In the evening, Sister Yixue took us to eat very delicious Chinese food." }
+                ]
+            }
+        ];
+
+        const GRAMMAR = [
+            {
+                title: "1. 固定短语 “看上去/看起来” (Ko'rinishidan / На вид / Looks like)",
+                uz: "“看上去” va “看起来” iboralari odam yoki narsaning ko'rinishini yoki holatini tasvirlash uchun ishlatiladi.",
+                ru: "Фразы «看上去» и «看起来» используются для описания внешнего вида или состояния человека или предмета.",
+                en: "The set phrases “看上去” and “看起来” can be used to describe the appearance or condition of a person or an object.",
+                examples: [
+                    { zh: "他们看上去有点儿像。", py: "Tāmen kànshàngqu yǒudiǎnr xiàng.", uz: "Ular ko'rinishidan bir oz o'xshaydi." },
+                    { zh: "这些菜看起来都很好吃。", py: "Zhèxiē cài kànqǐlai dōu hěn hǎochī.", uz: "Bu ovqatlar ko'rinishidan juda mazali." },
+                    { zh: "那个新来的老师看上去很年轻。", py: "Nàge xīn lái de lǎoshī kànshàngqu hěn niánqīng.", uz: "Yangi kelgan o'qituvchi ko'rinishidan juda yosh." }
+                ]
+            },
+            {
+                title: "2. 疑问代词的非疑问用法 (So'roq olmoshlarining so'roq bo'lmagan holda ishlatilishi)",
+                uz: "“哪儿” (qayerda), “什么” (nima), “谁” (kim), va “哪” (qaysi) kabi so'roq olmoshlari darak gaplarda noaniq joy, narsa yoki odamni ifodalash uchun ishlatilishi mumkin.",
+                ru: "Вопросительные местоимения, такие как «哪儿», «什么», «谁» и «哪», могут использоваться в повествовательных предложениях для обозначения неуточненных мест, вещей или людей.",
+                en: "Interrogative pronouns such as “哪儿”, “什么”, “谁”, and “哪” can be used in declarative sentences to indicate unspecified places, things, or people.",
+                examples: [
+                    { zh: "我好像在哪儿看到过这个箱子。", py: "Wǒ hǎoxiàng zài nǎr kàndàoguo zhège xiāngzi.", uz: "Men bu jomadonni qayerdadir ko'rganman shekilli." },
+                    { zh: "你吃点儿什么再走吧。", py: "Nǐ chī diǎnr shénme zài zǒu ba.", uz: "Biror nima yeb, keyin keting." },
+                    { zh: "我们哪天一起去踢足球吧。", py: "Wǒmen nǎ tiān yìqǐ qù tī zúqiú ba.", uz: "Biz qaysidir kuni birga futbol o'ynagani boramiz." }
+                ]
+            },
+            {
+                title: "3. 多项定语 (Ko'p tarmoqli aniqlovchilar / Multiple Attributives)",
+                uz: "Ism oldida bir vaqtning o'zida bir nechta aniqlovchilar kelishi mumkin. Ular odatda vaqt/joy, harakat/holat va xususiyat tartibida joylashadi.",
+                ru: "Именная вершина может определяться несколькими атрибутами одновременно. Обычно они располагаются в порядке: время/место, действие/состояние, характеристика.",
+                en: "A nominal head can be modified by multiple attributives simultaneously. They are generally arranged in the order of time/location, action/state, and characteristic.",
+                examples: [
+                    { zh: "那个穿着黑衣服的短头发的年轻人", py: "Nàge chuānzhe hēi yīfu de duǎn tóufa de niánqīng rén", uz: "Qora kiyim kiygan, kalta sochli yosh yigit." },
+                    { zh: "昨天和家月一起看电影的两个人是我的朋友。", py: "Zuótiān hé Jiāyuè yìqǐ kàn diànyǐng de liǎng ge rén shì wǒ de péngyou.", uz: "Kecha Jiayue bilan birga kino ko'rgan ikki kishi mening do'stlarimdir." },
+                    { zh: "我那件新买的白色的衣服在哪儿？", py: "Wǒ nà jiàn xīn mǎi de báisè de yīfu zài nǎr?", uz: "Mening yangi sotib olingan oq kiyimim qayerda?" }
+                ]
+            }
+        ];
+
+        const VOCAB_TEST = [
+            { q: "以为", options: ["o'ylamoq, xisoblamoq", "o'xshamoq", "o'smoq", "pasport"], correct: 0 },
+            { q: "像", options: ["raqam", "o'xshamoq", "bo'y", "bagaj"], correct: 1 },
+            { q: "长", options: ["kutib olmoq", "yordam bermoq", "o'smoq, rivojlanmoq", "yo'qotmoq"], correct: 2 },
+            { q: "身高", options: ["metr", "qisqa", "muhim", "bo'y"], correct: 3 },
+            { q: "米", options: ["metr", "soch", "xavotirlanmoq", "rasm"], correct: 0 },
+            { q: "瘦", options: ["yosh", "ozg'in", "turmoq", "o'rta"], correct: 1 },
+            { q: "接", options: ["qisqa", "kerak", "kutib olmoq", "olib kelmoq"], correct: 2 },
+            { q: "行李", options: ["xizmat ko'rsatish stoli", "jomadon", "pasport", "bagaj, yuk"], correct: 3 },
+            { q: "丢", options: ["yo'qotmoq", "kashf qilmoq", "o'xshaydi", "turmoq"], correct: 0 },
+            { q: "箱子", options: ["muhim", "jomadon, quti", "rasm", "bagaj, yuk"], correct: 1 },
+            { q: "号码", options: ["o'rta", "yo'qolmoq", "raqam", "soch"], correct: 2 },
+            { q: "好像", options: ["kerak", "qisqa", "yordam bermoq", "o'xshaydi, go'yo"], correct: 3 },
+            { q: "重要", options: ["muhim", "xavotirlanmoq", "ozg'in", "yosh"], correct: 0 },
+            { q: "着急", options: ["kutib olmoq", "xavotirlanmoq", "olib kelmoq", "yo'qotmoq"], correct: 1 },
+            { q: "护照", options: ["raqam", "bagaj, yuk", "pasport", "rasm"], correct: 2 },
+            { q: "服务台", options: ["jomadon", "pasport", "xizmat ko'rsatish stoli", "metr"], correct: 2 },
+            { q: "应该", options: ["kerak, lozim", "muhim", "qisqa", "o'rta"], correct: 0 },
+            { q: "站", options: ["o'xshamoq", "turmoq", "kashf qilmoq", "o'ylamoq"], correct: 1 },
+            { q: "中间", options: ["o'xshaydi", "yosh", "o'rta", "soch"], correct: 2 },
+            { q: "短", options: ["bo'y", "ozg'in", "muhim", "qisqa"], correct: 3 },
+            { q: "头发", options: ["soch", "rasm", "pasport", "raqam"], correct: 0 },
+            { q: "年轻", options: ["qisqa", "yosh", "muhim", "o'xshaydi"], correct: 1 },
+            { q: "发现", options: ["o'smoq", "yo'qotmoq", "kashf qilmoq, topmoq", "kutib olmoq"], correct: 2 },
+            { q: "帮助", options: ["turmoq", "olib kelmoq", "xavotirlanmoq", "yordam bermoq"], correct: 3 },
+            { q: "不见", options: ["yo'qolmoq", "o'ylamoq", "o'xshamoq", "topmoq"], correct: 0 },
+            { q: "照片", options: ["pasport", "rasm", "bagaj", "jomadon"], correct: 1 },
+            { q: "带", options: ["turmoq", "yo'qotmoq", "olib kelmoq, olib yurmoq", "yordam bermoq"], correct: 2 },
+        ];
+
+        const GRAMMAR_TEST = [
+            { q: "A: 你怎么了？今天___很累。 B: 昨天没睡好。", options: ["看上去", "看见", "看着"], correct: 0 },
+            { q: "这些菜___都很好吃。", options: ["看看", "看起来", "看见"], correct: 1 },
+            { q: "我好像在___看到过这个箱子。", options: ["哪儿", "那儿", "这儿"], correct: 0 },
+            { q: "你吃点儿___再走吧。", options: ["什么", "怎么", "为什么"], correct: 0 },
+            { q: "我们___天一起去踢足球吧。", options: ["这", "那", "哪"], correct: 2 },
+            { q: "李文是那个穿着黑衣服___短头发的年轻人吗？", options: ["得", "的", "地"], correct: 1 },
+            { q: "昨天和家月一起看电影的___是我的朋友。", options: ["两个人", "两的人", "个人两"], correct: 0 },
+            { q: "我那件___白色的衣服在哪儿？", options: ["新买的", "买新的", "的买新"], correct: 0 },
+            { q: "那本___书是我最喜欢的。", options: ["买昨天得", "昨天的买", "昨天买的"], correct: 2 },
+            { q: "那个___的人是李文吗？", options: ["高个子", "个子高", "高的高"], correct: 0 },
+            { q: "有时间了来我家，我做点儿___给你吃。", options: ["什么", "怎么", "哪儿"], correct: 0 },
+            { q: "这几天太累了，我想去___休息一下。", options: ["谁", "什么", "哪儿"], correct: 2 },
+            { q: "我们是不是走错了？我也不知道，我去问问___。", options: ["谁", "什么", "哪儿"], correct: 0 },
+            { q: "那个___新来的老师。", options: ["看上去很年轻的", "很年轻看上去的", "的看上去很年轻"], correct: 0 },
+            { q: "他比同乐高，身高有___。", options: ["一八米", "一米八", "八米一"], correct: 1 }
+        ];
+
+        const FILL_BLANKS = [
+            { q: "服务台在前面，我们过去___吧。(ask/inquire)", options: ["问问", "接", "带", "长"], correct: 0 },
+            { q: "他已经到了，我们快出去___他吧。(pick up)", options: ["丢", "接", "想", "站"], correct: 1 },
+            { q: "我的护照不见了，是不是在机场___了？(lost)", options: ["发", "带", "丢", "看"], correct: 2 },
+            { q: "行李票很___，你们出机场的时候有人看。(important)", options: ["着急", "年轻", "短", "重要"], correct: 3 },
+            { q: "我___了两个行李箱和一个大包，所以走得非常慢。(take/bring)", options: ["带", "接", "发", "找"], correct: 0 },
+            { q: "A: 这个头发很短的男孩儿是我弟弟。 B: 我___这个是你，你们长得太像了。(thought)", options: ["像", "以为", "丢", "长"], correct: 1 },
+            { q: "A: 我___坐飞机来北京的人非常多。 B: 对，很多人这个时候来北京旅游。(seemingly)", options: ["发现", "以为", "好像", "着急"], correct: 2 },
+            { q: "A: 这是我和哥哥的照片，你看我们___吗？ B: 你们很像。(alike/similar)", options: ["短", "瘦", "长", "像"], correct: 3 },
+            { q: "你的行李箱找到了，谢谢您的___！(help)", options: ["帮助", "护照", "号码", "中间"], correct: 0 },
+            { q: "那个穿着黑衣服的___子的人是王老师吗？(height/stature)", options: ["发", "个", "箱", "米"], correct: 1 }
+        ];
+
+        // --- COMPONENTS ---
+
+        const playAudio = (text) => {
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'zh-CN';
+                utterance.rate = 0.85; 
+                window.speechSynthesis.speak(utterance);
+            }
+        };
+
+        const Flashcards = () => {
+            const [currentIndex, setCurrentIndex] = useState(0);
+            const [isFlipped, setIsFlipped] = useState(false);
+
+            const nextCard = () => {
+                setIsFlipped(false);
+                setCurrentIndex((prev) => (prev + 1) % VOCABULARY.length);
+            };
+
+            const prevCard = () => {
+                setIsFlipped(false);
+                setCurrentIndex((prev) => (prev === 0 ? VOCABULARY.length - 1 : prev - 1));
+            };
+
+            const word = VOCABULARY[currentIndex];
+
+            return (
+                <div className="flex flex-col items-center justify-center space-y-8 p-6">
+                    <div className="text-slate-300 text-lg font-medium tracking-wide">
+                        So'z {currentIndex + 1} / {VOCABULARY.length}
+                    </div>
+                    
+                    <div 
+                        className="w-full max-w-md h-80 relative perspective-1000 cursor-pointer"
+                        onClick={() => setIsFlipped(!isFlipped)}
+                    >
+                        <div className={`w-full h-full transition-transform duration-500 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
+                            <div className="absolute w-full h-full backface-hidden bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl flex flex-col items-center justify-center p-8">
+                                <h2 className="text-8xl font-bold text-amber-400 mb-6 drop-shadow-md">{word.zh}</h2>
+                                <button 
+                                    onClick={(e) => { e.stopPropagation(); playAudio(word.zh); }}
+                                    className="p-3 bg-white/10 hover:bg-white/20 rounded-full text-slate-200 transition-colors"
+                                    title="Tinglash (Listen)"
+                                >
+                                    <Volume2 size={28} />
+                                </button>
+                            </div>
+
+                            <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-slate-800 border border-white/20 rounded-3xl shadow-2xl flex flex-col items-center justify-center p-8 space-y-4">
+                                <p className="text-3xl font-semibold text-amber-300 mb-2">{word.py}</p>
+                                <div className="w-full h-px bg-slate-600 my-2"></div>
+                                <p className="text-xl text-slate-200 text-center"><span className="text-slate-400 text-sm block mb-1">Uzbek</span>{word.uz}</p>
+                                <p className="text-lg text-slate-300 text-center"><span className="text-slate-400 text-sm block mb-1">Русский</span>{word.ru}</p>
+                                <p className="text-lg text-slate-300 text-center"><span className="text-slate-400 text-sm block mb-1">English</span>{word.en}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center space-x-6">
+                        <button onClick={prevCard} className="p-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-amber-400 transition-colors">
+                            <ChevronLeft size={32} />
+                        </button>
+                        <button onClick={nextCard} className="p-4 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/50 rounded-full text-amber-400 transition-colors shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                            <ChevronRight size={32} />
+                        </button>
+                    </div>
+                </div>
+            );
+        };
+
+        const QuizComponent = ({ data, isVocab }) => {
+            const [currentQ, setCurrentQ] = useState(0);
+            const [score, setScore] = useState(0);
+            const [showResult, setShowResult] = useState(false);
+            const [selectedOpt, setSelectedOpt] = useState(null);
+            const [isAnswered, setIsAnswered] = useState(false);
+
+            const handleOptionClick = (index) => {
+                if (isAnswered) return;
+                setSelectedOpt(index);
+                setIsAnswered(true);
+                if (index === data[currentQ].correct) setScore(score + 1);
+            };
+
+            const nextQuestion = () => {
+                if (currentQ + 1 < data.length) {
+                    setCurrentQ(currentQ + 1);
+                    setSelectedOpt(null);
+                    setIsAnswered(false);
+                } else {
+                    setShowResult(true);
+                }
+            };
+
+            const resetQuiz = () => {
+                setCurrentQ(0);
+                setScore(0);
+                setShowResult(false);
+                setSelectedOpt(null);
+                setIsAnswered(false);
+            };
+
+            if (showResult) {
+                return (
+                    <div className="flex flex-col items-center justify-center p-12 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 max-w-2xl mx-auto mt-10">
+                        <h2 className="text-4xl font-bold text-slate-100 mb-6">Natija (Result)</h2>
+                        <div className="text-7xl font-black text-amber-400 mb-8 drop-shadow-lg">
+                            {score} / {data.length}
+                        </div>
+                        <p className="text-xl text-slate-300 mb-8">
+                            {score === data.length ? "Ajoyib! (Perfect!) 🎉" : "Yana harakat qilib ko'ring! (Keep trying!) 💪"}
+                        </p>
+                        <button onClick={resetQuiz} className="flex items-center px-8 py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold rounded-full transition-all transform hover:scale-105">
+                            <RotateCcw className="mr-2" size={24} /> Qaytadan boshlash (Restart)
+                        </button>
+                    </div>
+                );
+            }
+
+            const q = data[currentQ];
+
+            return (
+                <div className="max-w-3xl mx-auto mt-8">
+                    <div className="flex justify-between items-center mb-6 text-slate-300">
+                        <span className="text-lg font-semibold tracking-wider">Savol (Question) {currentQ + 1} / {data.length}</span>
+                        <span className="text-lg font-semibold text-amber-400">To'g'ri (Score): {score}</span>
+                    </div>
+                    
+                    <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-10 rounded-3xl mb-8 shadow-xl">
+                        <h3 className={`text-center font-bold text-amber-400 mb-4 ${isVocab ? 'text-8xl' : 'text-4xl leading-relaxed'}`}>
+                            {q.q}
+                        </h3>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {q.options.map((opt, idx) => {
+                            let btnClass = "p-5 rounded-2xl border-2 text-left text-lg font-medium transition-all duration-300 ";
+                            
+                            if (!isAnswered) {
+                                btnClass += "bg-slate-800/50 border-slate-600 hover:bg-slate-700 hover:border-amber-400/50 text-slate-200 cursor-pointer hover:shadow-lg hover:-translate-y-1";
+                            } else {
+                                if (idx === q.correct) {
+                                    btnClass += "bg-green-500/20 border-green-500 text-green-300 shadow-[0_0_15px_rgba(34,197,94,0.3)]";
+                                } else if (idx === selectedOpt) {
+                                    btnClass += "bg-red-500/20 border-red-500 text-red-300";
+                                } else {
+                                    btnClass += "bg-slate-800/30 border-slate-700/50 text-slate-500 opacity-50";
+                                }
+                            }
+
+                            return (
+                                <button 
+                                    key={idx} 
+                                    onClick={() => handleOptionClick(idx)}
+                                    className={btnClass}
+                                    disabled={isAnswered}
+                                >
+                                    <div className="flex justify-between items-center">
+                                        <span>{opt}</span>
+                                        {isAnswered && idx === q.correct && <CheckCircle className="text-green-400" />}
+                                        {isAnswered && idx === selectedOpt && idx !== q.correct && <XCircle className="text-red-400" />}
+                                    </div>
+                                </button>
+                            );
+                        })}
+                    </div>
+
+                    {isAnswered && (
+                        <div className="mt-8 flex justify-center animate-fade-in-up">
+                            <button 
+                                onClick={nextQuestion}
+                                className="flex items-center px-10 py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold rounded-full transition-all shadow-lg hover:shadow-amber-500/30"
+                            >
+                                Keyingisi (Next) <ChevronRight className="ml-2" />
+                            </button>
+                        </div>
+                    )}
+                </div>
+            );
+        };
+
+        const Dialogues = () => {
+            return (
+                <div className="max-w-4xl mx-auto space-y-12 pb-12">
+                    {DIALOGUES.map((dialogue, idx) => (
+                        <div key={idx} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
+                            <div className="bg-slate-800/80 px-8 py-5 border-b border-white/10">
+                                <h3 className="text-2xl font-bold text-amber-400">{dialogue.title}</h3>
+                            </div>
+                            <div className="p-8 space-y-6">
+                                {dialogue.lines.map((line, lIdx) => (
+                                    <div key={lIdx} className="flex gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors group">
+                                        <div className="flex-shrink-0 pt-1">
+                                            <button 
+                                                onClick={() => playAudio(line.zh)}
+                                                className="p-2 bg-slate-700 text-slate-300 rounded-full group-hover:bg-amber-500 group-hover:text-slate-900 transition-colors"
+                                            >
+                                                <Volume2 size={20} />
+                                            </button>
+                                        </div>
+                                        <div className="flex-1 space-y-2">
+                                            <p className="text-sm font-semibold text-amber-500/80 uppercase tracking-wider">{line.speaker}</p>
+                                            <p className="text-2xl font-medium text-slate-100">{line.zh}</p>
+                                            <p className="text-lg text-amber-200/80 font-mono">{line.py}</p>
+                                            <div className="space-y-1 pt-2 mt-2 border-t border-slate-700/50 text-sm">
+                                                <p className="text-slate-300"><span className="text-slate-500 w-8 inline-block">UZ:</span> {line.uz}</p>
+                                                <p className="text-slate-300"><span className="text-slate-500 w-8 inline-block">RU:</span> {line.ru}</p>
+                                                <p className="text-slate-300"><span className="text-slate-500 w-8 inline-block">EN:</span> {line.en}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            );
+        };
+
+        const Grammar = () => {
+            return (
+                <div className="max-w-4xl mx-auto space-y-10 pb-12">
+                    {GRAMMAR.map((rule, idx) => (
+                        <div key={idx} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-xl">
+                            <h3 className="text-2xl font-bold text-amber-400 mb-6 pb-4 border-b border-white/10">{rule.title}</h3>
+                            <div className="space-y-3 mb-8 text-slate-300">
+                                <p><span className="font-semibold text-slate-400 mr-2">UZ:</span>{rule.uz}</p>
+                                <p><span className="font-semibold text-slate-400 mr-2">RU:</span>{rule.ru}</p>
+                                <p><span className="font-semibold text-slate-400 mr-2">EN:</span>{rule.en}</p>
+                            </div>
+                            <div className="bg-slate-900/50 rounded-2xl p-6 border border-slate-700/50">
+                                <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Misollar (Examples)</h4>
+                                <ul className="space-y-5">
+                                    {rule.examples.map((ex, eIdx) => (
+                                        <li key={eIdx} className="flex flex-col space-y-1 border-l-2 border-amber-500/50 pl-4">
+                                            <div className="flex items-center space-x-3">
+                                                <button onClick={() => playAudio(ex.zh)} className="text-slate-400 hover:text-amber-400 transition-colors">
+                                                    <Volume2 size={18} />
+                                                </button>
+                                                <span className="text-xl font-medium text-slate-100">{ex.zh}</span>
+                                            </div>
+                                            <span className="text-amber-200/70 ml-7">{ex.py}</span>
+                                            <span className="text-slate-400 text-sm ml-7 italic">{ex.uz}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            );
+        };
+
+        // --- MAIN APP ---
+
+        const App = () => {
+            const [activeTab, setActiveTab] = useState('flashcards');
+
+            const tabs = [
+                { id: 'flashcards', label: "Lug'at", icon: BookOpen },
+                { id: 'dialogues', label: "Muloqot", icon: MessageCircle },
+                { id: 'grammar', label: "Grammatika", icon: BookText },
+                { id: 'vocabTest', label: "Lug'at Testi", icon: FileQuestion },
+                { id: 'grammarTest', label: "Grammatika Testi", icon: HelpCircle },
+                { id: 'fillBlanks', label: "So'zlarni To'ldirish", icon: PenTool },
+            ];
+
+            return (
+                <div>
+                    <header className="pt-12 pb-8 px-6 text-center border-b border-white/5 bg-slate-900/20 shadow-lg backdrop-blur-sm sticky top-0 z-10">
+                        <h1 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500 mb-4 drop-shadow-sm">
+                            我们去机场接你们 (We will pick you up at the airport)
+                        </h1>
+                        <h2 className="text-lg md:text-xl font-medium text-indigo-200/80 tracking-wide">
+                            Dilfuza Kāng lǎo shī bilan xitoy tilini o'rganmiz
+                        </h2>
+                    </header>
+
+                    <main className="container mx-auto px-4 py-8 min-h-[calc(100vh-250px)]">
+                        <div className="flex flex-wrap justify-center gap-3 mb-10">
+                            {tabs.map((tab) => {
+                                const Icon = tab.icon;
+                                const isActive = activeTab === tab.id;
+                                return (
+                                    <button
+                                        key={tab.id}
+                                        onClick={() => setActiveTab(tab.id)}
+                                        className={`flex items-center px-5 py-3 rounded-full text-sm font-semibold transition-all duration-300 
+                                            ${isActive 
+                                                ? 'bg-amber-500 text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] scale-105' 
+                                                : 'bg-white/5 text-slate-400 hover:bg-white/10 hover:text-slate-200 border border-white/5 hover:border-white/20'}`}
+                                    >
+                                        <Icon size={18} className="mr-2" />
+                                        {tab.label}
+                                    </button>
+                                );
+                            })}
+                        </div>
+
+                        <div className="animate-fade-in-up">
+                            {activeTab === 'flashcards' && <Flashcards />}
+                            {activeTab === 'dialogues' && <Dialogues />}
+                            {activeTab === 'grammar' && <Grammar />}
+                            
+                            {/* MUST ADD KEY PROP TO PREVENT COMPONENT CRASHES ON TAB SWITCH */}
+                            {activeTab === 'vocabTest' && <QuizComponent key="vocab" data={VOCAB_TEST} isVocab={true} />}
+                            {activeTab === 'grammarTest' && <QuizComponent key="grammar" data={GRAMMAR_TEST} isVocab={false} />}
+                            {activeTab === 'fillBlanks' && <QuizComponent key="fill" data={FILL_BLANKS} isVocab={false} />}
+                        </div>
+                    </main>
+
+                    <footer className="border-t border-white/10 bg-slate-950/80 backdrop-blur-lg py-8 text-center">
+                        <p className="text-slate-400 font-medium tracking-wide">HSK 3 NEW3.0 - Lesson 1</p>
+                        <p className="text-slate-500 mt-2 text-sm">© 2026 Dilfuza Kāng lǎo shī (telegram@diffila)</p>
+                    </footer>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
 </body>
 </html>
